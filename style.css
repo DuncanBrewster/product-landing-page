@@ -79,27 +79,26 @@ h3 {
 /*GRID SECTION*/
 
 #package-layout {
-    grid-area: auto;
-    background: var(--medium);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "budget standard premium";
-    gap: 6.25rem;
-    margin-left: 6.25rem;
+  background: var(--medium);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas: "budget standard premium";
+  gap: 15.25rem;
 }
 
 .packages {
-    background: rgb(255,255,255, 0.85);
-    padding: 1rem;
-    padding-top: 1.9rem;
-    border-radius: 0.5rem;
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    text-align: center;
-    text-decoration: none;
-    z-index: 2;
+  background: rgb(255,255,255, 0.85);
+  padding: 1rem;
+  padding-top: 1.9rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  text-align: center;
+  text-decoration: none;
+  z-index: 2;
 }
 
 .packages:hover {
@@ -228,7 +227,6 @@ footer {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  list-style: none;
   gap: 2rem;
   margin: 0rem;
 }
@@ -270,16 +268,16 @@ footer {
 
 /*MEDIA RESPONSIVE DESIGN*/
 
-@media(max-width: 1300px) {
+@media(max-width: 1100px) {
   #package-layout {
-    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "budget standard"
-                          "premium";
+                          "premium";*/
     justify-items: center;
   }
 
   .packages {
-    width: 50%;
+    width: 80%;
   }
 }
 
