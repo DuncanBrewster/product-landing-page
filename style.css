@@ -6,12 +6,16 @@ body {
   background-color: rgba(255,239,224);
   line-height: 1.4;
   width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
   font-size: 1.2vw;
 }
 
 #background{
     position: absolute;
     width: 100%;
+    height: auto;
     top: 0rem;
     left: 0rem;
     z-index: -1;
@@ -48,8 +52,7 @@ header {
   .nav-link:hover{
     text-decoration: underline;
     font-weight: bold;
-    filter: brightness(150%);
-    filter: drop-shadow(0.5rem 0.5rem 0.5rem white);
+    filter: drop-shadow(0.1rem 0.1rem 0.2rem white);
   }
 
 h1{
@@ -67,7 +70,7 @@ h2 {
 /*Build Your Next Vacation*/
 
 h3 {
-    font-size: 4vw;
+    font-size: 64px;
     color: white;
     text-align: center;
     padding-top: 16rem;
@@ -84,14 +87,14 @@ h3 {
   justify-content: center;
   align-content: center;
   grid-template-areas: "budget standard premium";
-  gap: 15.25rem;
+  gap: 15.25vw;
 }
 
 .packages {
   background: rgb(255,255,255, 0.85);
   padding: 1rem;
   padding-top: 1.9rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   width: 15rem;
   display: flex;
   flex-direction: column;
@@ -99,45 +102,78 @@ h3 {
   text-align: center;
   text-decoration: none;
   z-index: 2;
+  overflow: hidden;
 }
 
 .packages:hover {
   transform: scale(1.1);
   transition: all .2s ease-in-out;
+  box-shadow: 0px 3px 3px black;
+  background: rgb(255,255,255, 0.93)
 }
 
+#budget:hover {
+  box-shadow: -2px 3px 2px black;
+}
+
+#premium:hover {
+  box-shadow: 2px 3px 2px black;
+}
+
+/*shine effect*/
+
+.packages::before {
+  position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.packages:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+/*end shine effect*/
+
 h4 {
-  font-size: 2vw;
+  font-size: 32px;
   color: black;
   text-decoration: none;
   margin-top: 1rem;
   margin-bottom: 1.9rem;
 }
 
-h4:hover {
-    text-decoration: underline;
+.text {
+  font-size: 16px;
+  color: #000;
 }
 
 a {
     text-decoration: none;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-link:hover{
-  text-decoration: underline;
-  font-weight: bold;
-  filter: brightness(150%);
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem white);
-}
-
 /*FONT AWESOME IMAGE*/
 
 .package-icons {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    color: black;
 }
 
 /*VIDEO*/
@@ -154,28 +190,21 @@ a {
   margin-top: 10rem;
   width: 47.5rem;
   height: 26.7rem;
+  border-radius: 1rem;
 }
 
 /*SUBSCRIPTION*/
-/*
-.text-area {
-  width: 18.2%;
-  padding: 0.75rem;
-  border-radius: 5px;
-  background: white;
-}*/
+
 
 #textarea-label {
-  font-size: 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
+
 #textarea-text {
-text-align: center;
-padding: 0rem;
+  text-align: center;
+  font-size: 1rem;
 }
 
 form {
@@ -191,10 +220,12 @@ form {
   margin-right: 0rem;
   border: none;
   font-size: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .submit {
-  width: 7%;
+  width: 6rem;
   padding: 0.75rem;
   background: rgb(15,53,97);
   color: white;
@@ -204,6 +235,8 @@ form {
   font-size: 1rem;
   -webkit-transition: .2s ease-in-out;
 	transition: .2s ease-in-out;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .submit:hover {
@@ -216,10 +249,10 @@ footer {
   background: rgb(15,53,97);
   color: white;
   margin-top: 5rem;
-  margin-bottom: 0rem;
-  grid-area: auto;
-  display: grid;
+  position: absolute;
+  width: 100%;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .footer-icons {
@@ -228,7 +261,7 @@ footer {
   justify-content: center;
   cursor: pointer;
   gap: 2rem;
-  margin: 0rem;
+  padding-bottom: .2rem;
 }
 
 #fb:hover {
@@ -259,6 +292,10 @@ footer {
 	transition: .2s ease-in-out;
 }
 
+#phone {
+  font-size: 1.8rem;
+}
+
 #phone:hover {
   opacity: 0.7;
   transform: scale(1.3);
@@ -268,16 +305,21 @@ footer {
 
 /*MEDIA RESPONSIVE DESIGN*/
 
-@media(max-width: 1100px) {
+@media(max-width: 1300px) {
   #package-layout {
-    /*grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "budget standard"
-                          "premium";*/
-    justify-items: center;
+    gap: 10vw;
+  }
+}
+
+@media(max-width: 1100px) {
+
+  h2 {
+    font-size: 1.1rem;
   }
 
-  .packages {
-    width: 80%;
+
+  #package-layout {
+    gap: 4vw;
   }
 }
 
@@ -291,6 +333,30 @@ footer {
 
   .packages {
     width: 40%;
+  }
+
+  #budget:hover {
+    box-shadow: 0px 2px 2px black;
+  }
+
+  #standard:hover {
+    box-shadow: 0px 2px 2px black;
+  }
+  
+  #premium:hover {
+    box-shadow: 0px 2px 2px black;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  .email {
+    width: 200px;
   }
 
 }

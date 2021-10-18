@@ -23,43 +23,44 @@
           <h1> Vacation Creation Agency</h1>
           
           <nav id="nav-bar">
-            <h2> Packages : &nbsp; &nbsp; &nbsp;
-              <a class="nav-link" href="#budget">Budget</a> &nbsp;
-              <a class="nav-link" href="#standard">Standard</a> &nbsp;
-              <a class="nav-link" href="#premium">Premium</a> &nbsp; &nbsp;
+            <h2> Packages : &nbsp; &nbsp;
+              <a class="nav-link" href="#statement">Budget</a> &nbsp;
+              <a class="nav-link" href="#budget">Standard</a> &nbsp;
+              <a class="nav-link" href="#standard">Premium</a> &nbsp; &nbsp;
               </h2>
           </nav>
                
-      </header>
+        </header>
 
-        <h3>Build Your Next Vacation</h3>
+        <h3 id="statement">Build Your Next Vacation</h3>
+
       <div id="package-layout">
-        <section id="budget" class="packages">
-          <div class="package-icons">
-            <i class="fas fa-hiking"></i>
-          </div>
-          <a id="budget-section" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-             allow="autoplay;">
-            <h4>Budget</h4></a>
-            <p>Want to travel but feel like you don't have the money? Click here and discover what affordable adventures are out there.</p>
-        </section>
-        <section id="standard" class="packages">
-          <div class="package-icons">
-            <i class="fas fa-umbrella-beach"></i>
-          </div>
-          <a id="budget-section" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <h4>Standard</h4></a>
-            <p>Find amazing vacation plans at a great price. Mix and match low-cost experiences with comfort.  </p>
-        </section>
-        <section id="premium" class="packages">
-          <div class="package-icons">
-            <i class="fab fa-fort-awesome"></i>
-          </div>
-          <a id="budget-section" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <h4>Premium</h4></a>
-            <p>Explore top tier adventures and travel in luxury with our premium vacation plans.</p>
-        </section>
+
+        <a id="budget" class="packages" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <div class="package-icons">
+              <i class="fas fa-hiking"></i>
+            </div>
+              <h4>Budget</h4>
+              <p class="text">Want to travel but feel like you don't have the money? Click here and discover what affordable adventures are out there.</p>
+        </a>
+
+        <a id="standard" class="packages" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <div class="package-icons">
+              <i class="fas fa-umbrella-beach"></i>
+            </div>
+              <h4>Standard</h4>
+              <p class="text">Find amazing vacation plans at a great price. Mix and match low-cost experiences with comfort.  </p>
+        </a>
+
+        <a id="premium" class="packages" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <div class="package-icons">
+              <i class="fab fa-fort-awesome"></i>
+            </div>
+            <h4>Premium</h4>
+              <p class="text">Explore top tier adventures and travel in luxury with our premium vacation plans.</p>
+        </a>
       </div>
+
         <figure id="video-reference">
             <iframe
                     id="video"
@@ -71,18 +72,11 @@
         </figure>
         
         <div>
-          <label for="textarea" id="textarea-label"><b>Subscribe to our newsletter</b></label>
+          <div for="textarea" id="textarea-label"><b>Subscribe to our newsletter</b></div>
           <div id="textarea-text">
             <p>and get the latest updates on trip availabilities</p>
-          </div>
-            <!--<textarea
-                   id="textarea"
-                   type="textarea"
-                   name="textarea"
-                   class="text-area"
-                   rows="5">
-                   
-             </textarea>-->
+          </div>  
+
           <form id="form" action="https://www.freecodecamp.com/email-submit">
             <input
                    id="email"
